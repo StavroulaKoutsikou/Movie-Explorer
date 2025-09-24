@@ -84,6 +84,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-text")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation("androidx.compose.runtime:runtime")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -1,8 +1,8 @@
 package com.example.movieexplorer.di
 
 import com.example.movieexplorer.BuildConfig
-import com.example.movieexplorer.data.remote.dto.MoviesApi
-import com.example.movieexplorer.domain.repository.MoviesRepositoryImpl
+import com.example.movieexplorer.data.remote.MoviesApi
+import com.example.movieexplorer.data.repository.MoviesRepositoryImpl
 import com.example.movieexplorer.domain.repository.MoviesRepository
 import dagger.Module
 import dagger.Provides
@@ -29,7 +29,7 @@ object NetworkModule {
     @Provides @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit =
         Retrofit.Builder()
-            .baseUrl(BuildConfig.TMDB_BASE_URL) // "https://api.themoviedb.org/3/"
+            .baseUrl(BuildConfig.TMDB_BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

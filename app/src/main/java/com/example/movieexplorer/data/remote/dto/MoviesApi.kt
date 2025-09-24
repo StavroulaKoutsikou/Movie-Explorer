@@ -1,16 +1,18 @@
-package com.example.movieexplorer.data.remote.dto
+package com.example.movieexplorer.data.remote
 
+import com.example.movieexplorer.data.remote.dto.MovieDetailsDto
+import com.example.movieexplorer.data.remote.dto.MoviesPageDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-
 interface MoviesApi {
+
     @GET("movie/popular")
     suspend fun getPopularMovies(
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
-        @Query("page") page: Int,
+        @Query("page") page: Int
     ): MoviesPageDto
 
     @GET("search/movie")
@@ -28,5 +30,4 @@ interface MoviesApi {
         @Query("api_key") apiKey: String,
         @Query("language") language: String
     ): MovieDetailsDto
-
 }

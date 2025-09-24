@@ -2,9 +2,10 @@
 <manifest package="com.example.movieexplorer"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".MovieExplorerApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,11 +21,9 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.MovieExplorer">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

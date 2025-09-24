@@ -3,8 +3,8 @@ package com.example.movieexplorer.data.mapper
 import com.example.movieexplorer.data.remote.dto.MovieDetailsDto
 import com.example.movieexplorer.data.remote.dto.MovieDto
 import com.example.movieexplorer.data.remote.dto.MoviesPageDto
-import com.example.movieexplorer.domain.model.MoviesInfo
 import com.example.movieexplorer.domain.model.MovieDetails
+import com.example.movieexplorer.domain.model.MoviesInfo
 import com.example.movieexplorer.domain.model.MoviesPage
 
 fun MovieDto.toDomain() = MoviesInfo(
@@ -18,8 +18,8 @@ fun MovieDto.toDomain() = MoviesInfo(
 
 fun MoviesPageDto.toDomain() = MoviesPage(
     page = page,
-    totalPages = totalPages,
-    results = results.map { it.toDomain() }
+    results = results.map { it.toDomain() },
+    totalPages = totalPages
 )
 
 fun MovieDetailsDto.toDomain() = MovieDetails(
